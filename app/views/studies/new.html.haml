@@ -1,0 +1,6 @@
+.study
+  .new
+    .contents
+      = form_for @study do |s|
+        = s.text_area :content
+        =s.submit '送信'
