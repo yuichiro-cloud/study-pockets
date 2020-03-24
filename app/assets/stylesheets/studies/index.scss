@@ -1,0 +1,21 @@
+.study
+  .index
+    .contents{
+      padding: 50px;
+      &__content{
+        height: 10vh;
+        background-color: red;
+        width: 40vw;
+        margin: 10px;
+        text-align: center;
+        line-height: 10vh;
+      }
+      &__user{
+        height: 10vh;
+        background-color: red;
+        width: 40vw;
+        margin: 10px;
+        text-align: center;
+        line-height: 10vh;
+      }
+    }

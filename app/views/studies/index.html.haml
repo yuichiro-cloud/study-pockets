@@ -2,4 +2,7 @@
   .index
     .contents
       - @studies.each do |study|
-        = study.content
+        .contents__content
+          = study.content.first(20)
+        .contents__user
+          = User.find(study.user_id).name 

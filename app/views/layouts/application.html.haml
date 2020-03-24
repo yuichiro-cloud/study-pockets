@@ -8,4 +8,20 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %header
+      .title
+        StudyPockets
+      .btn
+        - if user_signed_in?
+          .btn__logout
+            = link_to 'ログアウト',destroy_user_session_path
+          .btn__post
+            = link_to '投稿',new_study_path
+        - else
+          .btn__sign-up
+            = link_to '新規登録',new_user_registration_path
+          .btn__sign-in
+            = link_to 'ログイン',new_user_session_path
     = yield
+    %footer
+      footer

@@ -3,6 +3,9 @@ Rails.application.routes.draw do
     :registrations => 'users/registrations',
     :sessions => 'users/sessions'   
   } 
+  devise_scope :user do
+    get '/users/sign_out' => 'users/sessions#destroy'
+  end
   root 'studies#index'
   resources :studies, only:[:new, :create]
 end
