@@ -10,10 +10,21 @@ header{
   }
   .btn{
     position: absolute;
-    &__logout{}
-    &__post{}
-    &__sign-up{}
-    &__sign-in{}
+    right: 0;
+    top: 50px;
+    display: flex;
+    &__logout{
+      margin-right: 20px;
+    }
+    &__post{
+      margin-right: 20px;
+    }
+    &__sign-up{
+      margin-right: 20px;
+    }
+    &__sign-in{
+      margin-right: 20px;
+    }
   }
 }
 .study{
