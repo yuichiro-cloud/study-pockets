@@ -2,5 +2,10 @@
   .new
     .contents
       = form_for @study do |s|
-        = s.text_area :content
-        =s.submit '送信'
+        .contents__form
+          .contents__form__title
+            = s.text_field :title,placeholder:"title"
+          .contents__form__content
+            = s.text_area :content,placeholder:"content"
+          .contents__form__btn
+            =s.submit '投稿',class:"contents__form__btn__submit"

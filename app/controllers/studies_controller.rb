@@ -4,6 +4,10 @@ def index
   @studies = Study.all
 end
 
+def show
+  @study = Study.find(params[:id])
+end
+
 def new
   @study = Study.new
 end
@@ -23,6 +27,6 @@ private
 # end
 
 def study_params
-  params.require(:study).permit(:content).merge(user_id: current_user.id)
+  params.require(:study).permit(:content, :title).merge(user_id: current_user.id)
 end
 end

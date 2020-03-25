@@ -1,0 +1,20 @@
+.study{
+
+  .new{
+
+    .contents{
+      &__form{
+        &__title{}
+        &__content{}
+        &__btn{
+          background-color: yellow;
+          &__submit{
+            border-radius: 20px;
+            color: white;
+            background-color: lightblue;
+          }
+        }
+      }
+    }
+  }
+}

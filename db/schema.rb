@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_03_24_095113) do
 
   create_table "studies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
     t.text "content"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false

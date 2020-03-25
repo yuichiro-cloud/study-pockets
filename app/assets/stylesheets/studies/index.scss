@@ -1,5 +1,7 @@
-.study
-  .index
+.study{
+
+  .index{
+
     .contents{
       padding: 50px;
       &__content{
@@ -19,3 +21,5 @@
         line-height: 10vh;
       }
     }
+  }
+}

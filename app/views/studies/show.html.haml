@@ -1,0 +1,12 @@
+.study
+  .show
+    .contents
+      .contents__user
+        .contents__user__left
+          = '投稿者'
+        .contents__user__right
+          = User.find(@study.user_id).name
+      .contents__title
+        = @study.title
+      .contents__content
+        = @study.content

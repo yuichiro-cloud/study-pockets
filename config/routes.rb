@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'users/sessions#destroy'
   end
   root 'studies#index'
-  resources :studies, only:[:new, :create]
+  resources :studies, only:[:show, :new, :create]
 end
