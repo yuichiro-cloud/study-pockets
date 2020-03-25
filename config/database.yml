@@ -16,6 +16,9 @@ default: &default
   username: root
   password:
   socket: /tmp/mysql.sock
+  username: itsuki
+  password: Wi0313wtk
+  socket: /var/run/mysqld//mysql.sock
 
 development:
   <<: *default
