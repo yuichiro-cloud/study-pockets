@@ -7,5 +7,9 @@
             = s.text_field :title,placeholder:"title"
           .contents__form__content
             = s.text_area :content,placeholder:"content"
+          .contents__form__tag
+            = s.fields_for :tags do |tag|
+              .content__form__tag__field
+                = tag.text_field :name,placeholder:"tag"
           .contents__form__btn
             =s.submit '投稿',class:"contents__form__btn__submit"

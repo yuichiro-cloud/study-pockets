@@ -3,7 +3,30 @@
   .show{
 
     .contents{
+      padding: 50px;
+      position: relative;
+      &__user{
+        margin:0 0 50px auto;
+        width: 30vw;
+        display: flex;
+        &__left{
+          font-size: 25px;
+        }
+        &__right{
+          color: green;
+          margin-left: 20px;
+          font-size: 25px;
 
+        }
+      }
+      &__title{
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 30px;
+      }
+      &__content{
+        text-align: center;
+      }
     }
   }
 }

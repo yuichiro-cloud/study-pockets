@@ -2,8 +2,13 @@
   .index
     .contents
       - @studies.each do |study|
-        .contents__content
-          = link_to study.title,study_path(study.id)
-          -# = study.title
-        .contents__user
-          = User.find(study.user_id).name 
+        .contents__box
+          .contents__box__top
+            .contents__box__top__title
+              = link_to study.title,study_path(study.id)
+            .contents__box__top__user
+              = User.find(study.user_id).name 
+          .contents__box__bottom
+            - @tags.where(study_id: study.id).each do |tag|
+              .contents__box__bottom__tag
+                = "##{tag.name}"

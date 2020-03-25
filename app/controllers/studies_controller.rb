@@ -2,6 +2,7 @@ class StudiesController < ApplicationController
 
 def index
   @studies = Study.all
+  @tags = Tag.all
 end
 
 def show
@@ -10,6 +11,7 @@ end
 
 def new
   @study = Study.new
+  @tags = @study.tags.build
 end
 
 def create
@@ -27,6 +29,6 @@ private
 # end
 
 def study_params
-  params.require(:study).permit(:content, :title).merge(user_id: current_user.id)
+  params.require(:study).permit(:content, :title, tags_attributes:[:name]).merge(user_id: current_user.id)
 end
 end
