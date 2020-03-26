@@ -23,4 +23,5 @@ Things you may want to cover:
 
 * ...
 
-勉強アプ
+study app
+コンフリ用のテスト
