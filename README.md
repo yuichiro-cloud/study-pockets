@@ -24,3 +24,5 @@ Things you may want to cover:
 * ...
 
 勉強アプリリリリ
+study app
+コンフリ用のテスト
