@@ -5,6 +5,15 @@
     .contents{
       padding: 50px;
       position: relative;
+      &__tags{
+        width: 450px;
+        display: flex;
+        flex-wrap: wrap;
+        &__tag{
+          margin-left: 10px;
+          color: rgba(0, 255, 242, 0.74);
+        }
+      }
       &__user{
         margin:0 0 50px auto;
         width: 30vw;
@@ -26,6 +35,9 @@
       }
       &__content{
         text-align: center;
+        a{
+          color: blue;
+        }
       }
     }
   }

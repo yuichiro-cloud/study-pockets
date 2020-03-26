@@ -6,29 +6,38 @@ header{
     font-size: 40px;
     text-align: center;
     line-height: 100px;
-
+    &__font{
+      color: white;
+    }
   }
-  .btn{
+  .btns{
     position: absolute;
     right: 0;
     top: 50px;
     display: flex;
-    &__logout{
+    &__btn{
       margin-right: 20px;
+      &__link{
+        color: white;
+      }
     }
-    &__post{
-      margin-right: 20px;
-    }
-    &__sign-up{
-      margin-right: 20px;
-    }
-    &__sign-in{
-      margin-right: 20px;
-    }
+    // &__logout{
+    //   margin-right: 20px;
+    // }
+    // &__post{
+    //   margin-right: 20px;
+    // }
+    // &__sign-up{
+    //   margin-right: 20px;
+    // }
+    // &__sign-in{
+    //   margin-right: 20px;
+    // }
   }
 }
 .study{
   // height: calc(100vh - 200px);
+  min-height: calc(100vh - 200px);
   height: 100%;
 }
 footer{

@@ -10,18 +10,18 @@
   %body
     %header
       .title
-        = link_to 'StudyPockets',root_path
-      .btn
+        = link_to 'StudyPockets',root_path,class:"title__font"
+      .btns
         - if user_signed_in?
-          .btn__logout
-            = link_to 'ログアウト',destroy_user_session_path
-          .btn__post
-            = link_to '投稿',new_study_path
+          .btns__btn
+            = link_to '投稿',new_study_path,class:"btns__btn__link"
+          .btns__btn
+            = link_to 'ログアウト',destroy_user_session_path,class:"btns__btn__link"
         - else
-          .btn__sign-up
-            = link_to '新規登録',new_user_registration_path
-          .btn__sign-in
-            = link_to 'ログイン',new_user_session_path
+          .btns__btn
+            = link_to '新規登録',new_user_registration_path,class:"btns__btn__link"
+          .btns__btn
+            = link_to 'ログイン',new_user_session_path,class:"btns__btn__link"
     = yield
     %footer
       footer

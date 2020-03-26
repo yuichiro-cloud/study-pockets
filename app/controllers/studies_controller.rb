@@ -7,6 +7,7 @@ end
 
 def show
   @study = Study.find(params[:id])
+  @tags = @study.tags
 end
 
 def new

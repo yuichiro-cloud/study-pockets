@@ -1,6 +1,10 @@
 .study
   .show
     .contents
+      .contents__tags
+        - @tags.each do |tag|
+          .contents__tags__tag
+            = "##{tag.name}"
       .contents__user
         .contents__user__left
           = '投稿者'
@@ -9,4 +13,5 @@
       .contents__title
         = @study.title
       .contents__content
-        = @study.content
+        -# = @study.content
+        = text_url_to_link(@study.content).html_safe  #application_helper.rbで定義したurlをlinkに変更する記述
