@@ -23,4 +23,4 @@ Things you may want to cover:
 
 * ...
 
-勉強アプリ
+勉強アプ
