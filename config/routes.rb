@@ -7,5 +7,9 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'users/sessions#destroy'
   end
   root 'studies#index'
-  resources :studies, only:[:show, :new, :create]
+  resources :studies, only:[:show, :new, :create] do
+    member do
+      get :tag_click
+    end
+  end
 end

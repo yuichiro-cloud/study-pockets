@@ -1,0 +1,16 @@
+.study
+  .tag
+    .contents
+      .contents__header
+        = "##{@tag.name}が含まれている投稿"
+      .contents__main
+        - @tags.each do |tag|
+          .contents__main__box
+            - tag.studies.each do |study|
+              = link_to study.title,study_path(study.id),class:"contents__main__box__title"
+              = User.find(study.user_id).name
+              .contents__main__box__tags
+                - study.tags.each do |t|
+                  .contents__main__box__tags__tag
+                    = link_to "##{t.name}",tag_click_study_path(t.id),class:"contents__main__box__tags__tag__link"
+            

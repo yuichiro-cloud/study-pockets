@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_25_064558) do
+ActiveRecord::Schema.define(version: 2020_03_27_072707) do
 
   create_table "studies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -21,12 +21,19 @@ ActiveRecord::Schema.define(version: 2020_03_25_064558) do
     t.index ["user_id"], name: "index_studies_on_user_id"
   end
 
-  create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
+  create_table "studies_tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "study_id"
+    t.bigint "tag_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["study_id"], name: "index_tags_on_study_id"
+    t.index ["study_id"], name: "index_studies_tags_on_study_id"
+    t.index ["tag_id"], name: "index_studies_tags_on_tag_id"
+  end
+
+  create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -43,4 +50,6 @@ ActiveRecord::Schema.define(version: 2020_03_25_064558) do
   end
 
   add_foreign_key "studies", "users"
+  add_foreign_key "studies_tags", "studies"
+  add_foreign_key "studies_tags", "tags"
 end
