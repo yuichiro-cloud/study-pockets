@@ -4,12 +4,15 @@
       = form_for @study do |s|
         .contents__form
           .contents__form__title
-            = s.text_field :title,placeholder:"title"
+            = s.text_field :title,placeholder:"title",class:'title-input'
           .contents__form__content
-            = s.text_area :content,placeholder:"content"
-          .contents__form__tag
+            = s.text_area :content,placeholder:"content",class:'content-input'
+          .contents__form__tag#tag-box
             = s.fields_for :tags do |tag|
-              .content__form__tag__field
-                = tag.text_field :name,placeholder:"tag"
+              .contents__form__tag__add#add-tag{data:{index:0}}
+                = 'タグを追加'
+              .contents__form__tag__box#tag-field
+                .contents__form__tag__box__field
+                  = tag.text_field :name,placeholder:"tag"
           .contents__form__btn
             =s.submit '投稿',class:"contents__form__btn__submit"

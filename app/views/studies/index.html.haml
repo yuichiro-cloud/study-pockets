@@ -9,6 +9,6 @@
             .contents__box__top__user
               = User.find(study.user_id).name 
           .contents__box__bottom
-            - @tags.where(study_id: study.id).each do |tag|
+            - study.tags.each do |tag|
               .contents__box__bottom__tag
-                = "##{tag.name}"
+                = link_to "##{tag.name}",tag_click_study_path(tag.id)

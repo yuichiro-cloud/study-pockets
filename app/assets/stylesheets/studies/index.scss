@@ -5,30 +5,34 @@
     .contents{
       padding: 50px;
       &__box{
+        background-color: rgba(135, 206, 250, 0.274);
+        margin-bottom: 3px;
         &__top{
           display: flex;
           &__title{
-            height: 10vh;
+            height: 30px;
             background-color: red;
             width: 40vw;
             margin: 10px;
             text-align: center;
-            line-height: 10vh;
+            line-height: 30px;
           }
           &__user{
-            height: 10vh;
+            height: 30px;
             background-color: lightblue;
             width: 20vw;
             margin: 10px;
             text-align: center;
-            line-height: 10vh;
+            line-height: 30px;
           }
         }
         &__bottom{
           display: flex;
           &__tag{
             margin-left: 10px;
-            color: rgba(0, 255, 242, 0.74);
+            a{
+              color: rgba(0, 255, 242, 0.74);
+            }
           }
         }
       }

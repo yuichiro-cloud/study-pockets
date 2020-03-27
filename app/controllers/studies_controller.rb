@@ -1,17 +1,27 @@
 class StudiesController < ApplicationController 
 
 def index
-  @studies = Study.all
-  @tags = Tag.all
+  @studies = Study.order("id DESC").all
+  # @studies = Study.all
+  # @tags = Tag.all
 end
+
+def tag_click
+  @tag = Tag.find(params[:id])
+  # binding.pry
+  @tags = Tag.where(name: @tag.name)
+  @studies = Study.all
+end 
 
 def show
   @study = Study.find(params[:id])
+  @tags = @study.tags
 end
 
 def new
   @study = Study.new
   @tags = @study.tags.build
+  # @tags = Tag.new
 end
 
 def create
