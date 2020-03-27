@@ -1,7 +1,8 @@
 class StudiesController < ApplicationController 
 
 def index
-  @studies = Study.all
+  @studies = Study.order("id DESC").all
+  # @studies = Study.all
   # @tags = Tag.all
 end
 
