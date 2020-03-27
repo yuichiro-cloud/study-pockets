@@ -4,7 +4,7 @@
       .contents__tags
         - @tags.each do |tag|
           .contents__tags__tag
-            = "##{tag.name}"
+            = link_to "##{tag.name}",tag_click_study_path(tag.id),class:"contents__tags__tag__link"
       .contents__user
         .contents__user__left
           = '投稿者'

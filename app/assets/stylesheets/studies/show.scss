@@ -11,7 +11,10 @@
         flex-wrap: wrap;
         &__tag{
           margin-left: 10px;
-          color: rgba(0, 255, 242, 0.74);
+          &__link{
+
+            color: rgba(0, 255, 242, 0.74);
+          }
         }
       }
       &__user{
