@@ -33,6 +33,14 @@ def create
   end
 end
 
+def like
+  # binding.pry
+  @favorite = Favorite.new
+end
+
+def unlike
+end
+
 private
 # def item_params
   # params.require(:item).permit(:name, :text,:condition,:burden, :area, :day, :price, :category_id, :user_id, :buyer , photos_attributes: [:image, :_destroy, :id]).merge(user_id: current_user.id)

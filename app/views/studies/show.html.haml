@@ -1,6 +1,9 @@
 .study
   .show
     .contents
+      .contents__fav
+        = "お気に入り"
+        %i.far.fa-star#favorite
       .contents__tags
         - @tags.each do |tag|
           .contents__tags__tag

@@ -5,6 +5,16 @@
     .contents{
       padding: 50px;
       position: relative;
+      &__fav{
+        position: absolute;
+        right: 50px;
+        top: 20px;
+        #favorite{
+          font-size: 35px;
+          // color: lightblue;
+          
+        }
+      }
       &__tags{
         width: 450px;
         display: flex;

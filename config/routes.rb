@@ -11,5 +11,9 @@ Rails.application.routes.draw do
     member do
       get :tag_click
     end
+    collection do
+      patch :like, defaults: { format: 'json' }
+      delete :unlike, defaults: { format: 'json' }
+    end
   end
 end
